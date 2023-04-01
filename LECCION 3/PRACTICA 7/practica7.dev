@@ -1,6 +1,6 @@
 [Project]
-FileName=practica9.dev
-Name=practica9
+FileName=practica7.dev
+Name=practica7
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=practica 9.c
+FileName=practica7.c
 CompileCpp=0
 Folder=
 Compile=1
