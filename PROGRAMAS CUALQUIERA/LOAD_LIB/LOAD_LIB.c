@@ -1,5 +1,14 @@
-/*Esta biblioteca es un programa que cuenta con diferentes estilos de barras de carga, para que puedas 
-utilizar varias opciones que desees...*/
+/*
+Programador: Jesus Osvaldo Sandoval Solis (Jezaah OSwaldosky)
+
+Proyecto: LOAD_LIB
+
+Fecha:10-Mar-2023
+
+Descripcion: Esta biblioteca es un programa que cuenta con diferentes estilos de barras de carga, para que puedas 
+utilizar varias opciones que desees...Este programa no funcionaria con compiladores online
+Este programa se puede guardar como una biblioteca y ser compilado con otros programas en C/C++
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
@@ -101,7 +110,7 @@ void load_4(int duracion, int pos_x,int pos_y, int tiempo){
 	}
 	return 0; 
 }
-
+////Quinta barra de carga
 void load_5(int duracion, int pos_x, int pos_y, int tiempo){
 	int i; 
 	for(i=0; i<=duracion; i++){
@@ -112,7 +121,7 @@ void load_5(int duracion, int pos_x, int pos_y, int tiempo){
 	}
 	return 0; 
 }
-
+////Sexta barra de carga
 void load_6(int duracion, int pos_x, int pos_y, int tiempo){
 	int i; 
 	for(i=0;i<=duracion;i++){
@@ -147,7 +156,7 @@ void load_6(int duracion, int pos_x, int pos_y, int tiempo){
 	}
 	return 0; 
 }
-
+///Funcion de seleccion de la barra de carga... 
 void load_select(int op,int duracion, int pos_x, int pos_y, int tiempo){
 	switch(op){
 		case 1: 
@@ -173,7 +182,7 @@ void load_select(int op,int duracion, int pos_x, int pos_y, int tiempo){
 		break; 
 	}
 }
-
+////Funcion para ocultar el cursor... 
 void cursor_cover(){
 		// Ocultar cursor.
 	CONSOLE_CURSOR_INFO cci;
@@ -181,13 +190,21 @@ void cursor_cover(){
 	cci.bVisible = 0;
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cci);
 }
-
+///Funcion principal para probar cada una de las funciones requeridas... 
 int main(){
+	////Introducimos un titulo a la consol, P.D no es necesaria programarla..
 	system("title loadlib_test");
-	cursor_cover();
-
+	////Funcion para eliminar el cursor, de esta forma tenemos limpia nuestra consola... 
+	cursor_cover();	
+			
+	/*Implementamos la funcion load_select(); que cuenta con todas nuestras funciones de carga y cuya configuracion 
+	es la siguiente: 
+	
+	load_select(tipo_msj_carga,duracion,posicion_x,posicion_y,tiempo_delay)
+	*/
 	load_select(6,25,45,15,1000000);
 	
 	return 0; 
 }
-
+/*Al manejar ficheros externos seria dificil de correr y compilar el programa en un compilador online, pero 
+si se copia y pega el codigo en una maquina debera correr sin problemas... */
