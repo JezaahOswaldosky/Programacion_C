@@ -1,0 +1,121 @@
+=====DATOS DE C/C++
+---COMPILER COMMANDS 
+/*gcc -g -Wall -ohello hello.c 
+-Wall Turn On the Warnings of the code.. 
+
+gcc -g -Wall -ansi -pedantic -ohello hello.c
+We'll turn off the Warnings.. 
+
+---CARACTERES ESPECIALES
+
+CHARACTER 	NAME		MEANING 
+\b			Backspace
+\f			Form Feed
+\n  		New Line 
+\r 			Return 
+\t 			Tab
+\"			"
+\\			\
+\nnn		Character number octal (nnn)
+
+
+---PREPROCESSORS DIRECTIVES 
+Directives   			Description 
+#define 		Substitutes a preprocessor macro
+
+#include 		Inserts a particular header from 	
+				another files
+
+#undef			Undefines a preprocessor macro
+
+#ifdef			Return true if this macro is defined
+
+#ifndef			Return true if this macro is nos 					defined
+
+#if 			Test if a compile time condition is 				true
+
+#else 			The alternatitive for #if
+
+#elif 			#else and #if in one statements
+
+#end if 		Ends preprocessor conditional 
+
+#error 			Prints error message on stderr
+
+#pragma			Issues special commands to the 						compiler, using a standarized method
+
+---PREDEFINE MACROS
+MACRO 				DESCRIPTION 
+
+__DATE__		The current date as character 						literal in "MMM DD YYYY" format
+
+__TIME__ 		The current time as character 						literal in "HH:MM:SS" format 
+
+__FILE__		The contains the current filename 					as a string literal 
+
+__LINE__		This contains the current line 						number as a decimal constant
+
+__STDC__		Defined as 1 when the compiler 						complies with the ANSI standar
+
+---string.h FUNCTIONS... 
+
+FUNCTIONS 						DESCRIPTION 
+strcpy(string1,string2);	Copy string1 into 									string2
+
+strcat(string1,string2);	Concatenate string2 								onto the end of string1
+
+length = strlen(string);	Get the length of a 								string
+
+strcmp(strin1,string2);		Compare string1 with 								strin2 and return a 								boolean
+
+---DATA INPUT FORMS...
+	METHOD 1
+	char variable[100];
+
+	fgets(variable,sizeof(variable),stdin);
+	variable[strlen(variable)-1] = '\0';
+
+	METHOD 2
+	sscanf(variable, format, &variable1, &variable2 ...);
+
+---INTEGER printf/sscanf CONVERSIONS 
+%Converson 				Uses
+%hd 			(signed) short int 
+%d 				(signed) int 
+%ld 			(signed) long int 
+%hu 			(unsigned) short int 
+%u 				(unsigned) int 
+%lu 			(unsigned) long int
+%f 				float 
+%lf				double 
+
+---SHORTHANDS OPERATORS 
+OPERATOR 	SHORTHAND  		EQUIVALENT STATEMENT 
++=			X+=2				X=X+2;
+-=			X-=2				X=X-2;
+*=			X*=2				X=X*2;
+/=			X/=2				X=X/2;
+%=			X%=2				X=X%2;
+
+++VARIABLE 	FIRST ADD, THEN MODIFY 
+VARIABLE++	FIRST MODIFY THEN ADD
+--VARIABLE 	FIRST REST, THEN MODIFY 
+VARIABLE--	FIRST MODIFY THEN REST
+
+---RELATIONAL OPERATORS 
+OPERATOR 			MEANING 
+<=				Less than or equal to  
+< 				Less than 
+>				Greater than 
+>= 				Greater than or equal to 
+== 				Equal 
+!=  			Not equal 
+
+---MATH TO C NAME TASNLATAION 
+MATH-STYLE NAME 			C-STYLE NAME 
+fn  					next_number; 
+fn-1					current_number; 
+fn-2					old_number; 
+
+
+
