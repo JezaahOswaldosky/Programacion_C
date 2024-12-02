@@ -1,0 +1,4 @@
+para enlazar libreria math.h se requiere compilar de la siguiente forma: 
+
+gcc -g programa.c -o nomPrograma -lm 
+
